@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <!-- أيقونات Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -19,8 +18,6 @@
             color: #fff;
             overflow-x: hidden;
         }
-
-        /* شاشة البرومو */
         .intro-overlay {
             position: fixed;
             top: 0;
@@ -86,8 +83,6 @@
             transform: scale(1.1);
             box-shadow: 0 0 25px rgba(0,255,136,0.6);
         }
-
-        /* الهيدر */
         .header {
             display: flex;
             justify-content: space-between;
@@ -113,8 +108,6 @@
             object-fit: cover;
             box-shadow: 0 0 20px rgba(0,255,136,0.4);
         }
-
-        /* قسم من أنا */
         .about-section {
             padding: 60px 5%;
             background: #111;
@@ -133,7 +126,6 @@
             color: #ccc;
             font-size: 16px;
         }
-
         .section-title {
             text-align: center;
             margin: 50px 0 30px;
@@ -141,8 +133,6 @@
             font-weight: 900;
             color: #00ff88;
         }
-
-        /* الكتب */
         .books-container {
             display: flex;
             justify-content: center;
@@ -211,6 +201,10 @@
             padding: 20px;
             overflow-y: auto;
             border: 3px solid #00ff88;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .book-content h4 {
             color: #00ff88;
@@ -220,66 +214,19 @@
             border-bottom: 2px solid #333;
             padding-bottom: 12px;
         }
-        .sub-section {
-            background: #1f1f1f;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            overflow: hidden;
-            border: 1px solid #2a2a2a;
-        }
-        .sub-section-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px;
-            background: #252525;
-            cursor: pointer;
-        }
-        .sub-section-header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 8px;
-            object-fit: cover;
-            border: 2px solid #00ff88;
-        }
-        .sub-section-header h5 {
-            font-size: 16px;
-            font-weight: 700;
-            color: #fff;
-        }
-        .sub-section-items {
-            padding: 15px;
-            display: none;
-        }
-        .sub-section.active .sub-section-items { display: block; }
-        .item {
-            margin-bottom: 12px;
-            padding-bottom: 12px;
-            border-bottom: 1px dashed #333;
-        }
-        .item:last-child { border: none; margin: 0; padding: 0; }
-        .item-title {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #ddd;
-            font-weight: 600;
-        }
-        .download-btn {
-            display: block;
-            width: 100%;
-            padding: 10px;
+        .enter-page-btn {
+            padding: 15px 30px;
             background: linear-gradient(90deg, #00ff88, #00cc6a);
             color: #000;
-            text-align: center;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: 900;
-            font-size: 14px;
+            font-size: 16px;
             transition: 0.3s;
         }
-        .download-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(0,255,136,0.5);
+        .enter-page-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0,255,136,0.6);
         }
         .close-book {
             position: absolute;
@@ -296,8 +243,6 @@
             font-weight: 900;
             z-index: 20;
         }
-
-        /* قسم خدماتي */
         .services-section {
             padding: 60px 5%;
             background: #0f0f0f;
@@ -326,8 +271,6 @@
             font-size: 20px;
             margin-bottom: 10px;
         }
-
-        /* قسم تواصل - أيقونات */
         .contact-section {
             padding: 60px 5%;
             background: #111;
@@ -359,7 +302,6 @@
             transform: scale(1.15) rotate(10deg);
             box-shadow: 0 0 20px rgba(0,255,136,0.6);
         }
-
         @media (max-width: 768px) {
             .book { width: 180px; height: 250px; }
             .book.opened { width: 90vw; }
@@ -371,25 +313,21 @@
 </head>
 <body>
 
-    <!-- شاشة البرومو -->
     <div class="intro-overlay" id="introOverlay">
         <video class="intro-video" autoplay muted loop>
             <source src="https://cdn.pixabay.com/video/2020/08/12/47211-449626640_large.mp4" type="video/mp4">
         </video>
-        
         <div class="intro-content">
             <h1>أهلاً بكم في عالم السيد جابر</h1>
             <p>مكتبتك الاحترافية للتحميلات المجانية</p>
             <button class="skip-intro" onclick="skipIntro()">ادخل العالم الآن 🚀</button>
         </div>
-
-        <!-- حط لينك الصوت بتاعك هنا -->
+        <!-- حط لينك صوتك الهاكر هنا لما تسجله -->
         <audio id="welcomeSound">
             <source src="#" type="audio/mpeg">
         </audio>
     </div>
 
-    <!-- الهيدر -->
     <div class="header">
         <div class="header-info">
             <h1>Gaber Talaat</h1>
@@ -398,7 +336,6 @@
         <img src="https://i.pravatar.cc/150?img=12" alt="Gaber Talaat" class="profile-pic">
     </div>
 
-    <!-- من أنا -->
     <div class="about-section">
         <h2>من أنا؟ 👨‍💻</h2>
         <p>
@@ -409,7 +346,6 @@
 
     <h2 class="section-title">اختر قسمك وابدأ التحميل 👇</h2>
 
-    <!-- الكتب -->
     <div class="books-container">
         
         <div class="book" data-book="montage">
@@ -417,30 +353,7 @@
             <div class="book-content">
                 <button class="close-book">×</button>
                 <h4>أدوات المونتاج</h4>
-                <div class="sub-section">
-                    <div class="sub-section-header">
-                        <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?w=200" alt="LUTs">
-                        <h5>1- حزم LUTs سينمائية</h5>
-                    </div>
-                    <div class="sub-section-items">
-                        <div class="item">
-                            <div class="item-title">LUTs أفلام هوليوود</div>
-                            <a href="https://exe.io/zeXAB8" class="download-btn" target="_blank">تحميل مباشر</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-header">
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200" alt="Premiere">
-                        <h5>2- انتقالات بريمير</h5>
-                    </div>
-                    <div class="sub-section-items">
-                        <div class="item">
-                            <div class="item-title">100 انتقال Glitch</div>
-                            <a href="#" class="download-btn" target="_blank">تحميل مباشر</a>
-                        </div>
-                    </div>
-                </div>
+                <p style="margin-bottom: 20px; color: #aaa;">قريباً...</p>
             </div>
         </div>
 
@@ -448,19 +361,9 @@
             <div class="book-cover"><h3>كورسات وبرامج 💻</h3></div>
             <div class="book-content">
                 <button class="close-book">×</button>
-                <h4>كورسات وبرامج</h4>
-                <div class="sub-section">
-                    <div class="sub-section-header">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=200" alt="Code">
-                        <h5>1- كورسات برمجة</h5>
-                    </div>
-                    <div class="sub-section-items">
-                        <div class="item">
-                            <div class="item-title">كورس HTML + CSS كامل</div>
-                            <a href="#" class="download-btn" target="_blank">تحميل مباشر</a>
-                        </div>
-                    </div>
-                </div>
+                <h4>أهم الكورسات في العالم</h4>
+                <p style="margin-bottom: 20px; color: #ccc; text-align: center;">أكتر من 50 كورس احترافي مجاناً</p>
+                <a href="courses.html" class="enter-page-btn">ادخل مكتبة الكورسات 🚀</a>
             </div>
         </div>
 
@@ -469,18 +372,7 @@
             <div class="book-content">
                 <button class="close-book">×</button>
                 <h4>ملفات التصميم</h4>
-                <div class="sub-section">
-                    <div class="sub-section-header">
-                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=200" alt="PSD">
-                        <h5>1- موكاب PSD</h5>
-                    </div>
-                    <div class="sub-section-items">
-                        <div class="item">
-                            <div class="item-title">موكاب لوجو 3D</div>
-                            <a href="#" class="download-btn" target="_blank">تحميل مباشر</a>
-                        </div>
-                    </div>
-                </div>
+                <p style="margin-bottom: 20px; color: #aaa;">قريباً...</p>
             </div>
         </div>
 
@@ -489,24 +381,12 @@
             <div class="book-content">
                 <button class="close-book">×</button>
                 <h4>كتب وملخصات</h4>
-                <div class="sub-section">
-                    <div class="sub-section-header">
-                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200" alt="Books">
-                        <h5>1- تطوير ذات</h5>
-                    </div>
-                    <div class="sub-section-items">
-                        <div class="item">
-                            <div class="item-title">كتاب العادات الذرية</div>
-                            <a href="#" class="download-btn" target="_blank">تحميل مباشر</a>
-                        </div>
-                    </div>
-                </div>
+                <p style="margin-bottom: 20px; color: #aaa;">قريباً...</p>
             </div>
         </div>
 
     </div>
 
-    <!-- خدماتي -->
     <div class="services-section">
         <h2 class="section-title">خدماتي 💼</h2>
         <div class="services-grid">
@@ -525,19 +405,18 @@
         </div>
     </div>
 
-    <!-- خلينا نتواصل - أيقونات -->
     <div class="contact-section">
         <h2 class="section-title">خلينا نتواصل 📱</h2>
         <div class="social-icons">
-            <!-- حط رقمك الصح هنا -->
+            <!-- ابعتلي رقمك الصح أحطه هنا -->
             <a href="https://wa.me/20123456789" target="_blank" title="واتساب">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <!-- حط يوزر التليجرام الصح هنا -->
+            <!-- ابعتلي يوزر التليجرام الصح هنا -->
             <a href="https://t.me/username" target="_blank" title="تليجرام">
                 <i class="fab fa-telegram"></i>
             </a>
-            <!-- حط ايميلك الصح هنا -->
+            <!-- ابعتلي ايميلك الصح هنا -->
             <a href="mailto:gaber@email.com" target="_blank" title="ايميل">
                 <i class="fas fa-envelope"></i>
             </a>
@@ -545,13 +424,10 @@
     </div>
 
     <script>
-        // سكريبت البرومو
         function skipIntro() {
             document.getElementById('introOverlay').classList.add('hidden');
             document.getElementById('welcomeSound').pause();
         }
-        
-        // الصوت يشتغل لما يدوس المستخدم
         document.addEventListener('click', () => {
             const audio = document.getElementById('welcomeSound');
             if(audio.src && audio.src !== window.location.href + '#') {
@@ -559,23 +435,17 @@
                 audio.play().catch(e => console.log('Audio play prevented'));
             }
         }, { once: true });
-
-        // يختفي البرومو تلقائي بعد 6 ثواني
         setTimeout(() => {
             skipIntro();
         }, 6000);
-
-        // يظهر مرة واحدة بس كل 24 ساعة
         if(localStorage.getItem('introSeen')) {
             document.getElementById('introOverlay').style.display = 'none';
         } else {
             localStorage.setItem('introSeen', 'true');
         }
-
-        // سكريبت الكتب
         document.querySelectorAll('.book').forEach(book => {
             book.addEventListener('click', function(e) {
-                if (!e.target.classList.contains('close-book') && !e.target.closest('.sub-section-header') && !e.target.classList.contains('download-btn')) {
+                if (!e.target.classList.contains('close-book') && !e.target.classList.contains('enter-page-btn')) {
                     document.querySelectorAll('.book.opened').forEach(b => b.classList.remove('opened'));
                     this.classList.add('opened');
                 }
@@ -585,12 +455,6 @@
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
                 this.closest('.book').classList.remove('opened');
-            });
-        });
-        document.querySelectorAll('.sub-section-header').forEach(header => {
-            header.addEventListener('click', function(e) {
-                e.stopPropagation();
-                this.parentElement.classList.toggle('active');
             });
         });
     </script>
