@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ادعمني عبر فودافون كاش | Gaber Talaat</title>
-    <meta name="description" content="لو عجبك المحتوى المجاني، تقدر تدعمني عن طريق فودافون كاش. دعمك بيساعدني أقدم أكتر.">
+    <title>ساهم في تطوير المحتوى | Gaber Talaat</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: 'Cairo', sans-serif; background: #0f0f0f; color: #fff; text-align: center; padding: 20px; }
-        .container { max-width: 500px; margin: 50px auto; background: #1a1a1a; padding: 40px 20px; border-radius: 15px; }
-        h1 { color: #e60000; margin-bottom: 10px; }
-        .vodafone-logo { width: 80px; margin-bottom: 20px; }
+        .container { max-width: 500px; margin: 50px auto; background: #1a1a1a; padding: 40px 20px; border-radius: 15px; border: 1px solid #333; }
+        h1 { color: #25d366; margin-bottom: 10px; }
         .number-box { 
-            background: #e60000; 
-            color: white; 
+            background: #222; 
+            color: #25d366; 
             font-size: 28px; 
             font-weight: bold; 
             padding: 15px; 
@@ -21,45 +19,47 @@
             margin: 20px 0; 
             letter-spacing: 2px;
             direction: ltr;
+            border: 2px dashed #25d366;
         }
         .qr-code { margin: 30px 0; }
         .qr-code img { width: 200px; border: 5px solid white; border-radius: 10px; }
         .btn { 
             background: #25d366; 
-            color: white; 
+            color: #0f0f0f; 
             padding: 12px 30px; 
             border-radius: 50px; 
             text-decoration: none; 
             display: inline-block; 
             margin-top: 20px;
             font-size: 18px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Vodafone_icon_2022.svg" class="vodafone-logo" alt="Vodafone Cash">
-        <h1>ادعمني عن طريق فودافون كاش</h1>
-        <p>لو المحتوى المجاني والـ LUTs فادوك، دعمك البسيط بيساعدني أكمل وأطور أكتر ❤️</p>
+        <i class="fas fa-rocket" style="font-size: 50px; color: #25d366;"></i>
+        <h1>ساهم في تطوير المحتوى</h1>
+        <p>المحتوى والـ LUTs هتفضل مجانية دايماً. مساهمتك بتساعدني أطور المعدات وأقدم شروحات أقوى 💚</p>
         
         <div class="number-box" id="cash-number">01020199392</div>
-        <button onclick="copyNumber()" class="btn" style="background:#333; margin-top:-10px; margin-bottom:20px;">
-            <i class="fas fa-copy"></i> انسخ الرقم
+        <button onclick="copyNumber()" class="btn">
+            <i class="fas fa-copy"></i> انسخ رقم فودافون كاش
         </button>
 
         <div class="qr-code">
-            <p>أو امسح الـ QR Code من تطبيق أنا فودافون:</p>
+            <p>أو امسح الكود من تطبيق أنا فودافون:</p>
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=tel:*9*7*01020199392*" alt="Vodafone Cash QR">
         </div>
 
-        <p style="margin-top:30px; color:#aaa;">شكراً لدعمك مقدماً 🙏</p>
+        <p style="margin-top:30px; color:#aaa;">شكراً ليك على التقدير 🙏</p>
         <a href="index.html" style="color:#25d366;">← ارجع للصفحة الرئيسية</a>
     </div>
 
     <script>
         function copyNumber() {
             navigator.clipboard.writeText('01020199392');
-            alert('تم نسخ الرقم: 01020199392');
+            alert('تم نسخ الرقم بنجاح');
         }
     </script>
 </body>
