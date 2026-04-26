@@ -140,8 +140,8 @@
             color: #fff;
         }
         @media (max-width: 768px) {
-  .course-title { flex-direction: column; text-align: center; }
-  .course-title h2 { font-size: 24px; }
+.course-title { flex-direction: column; text-align: center; }
+.course-title h2 { font-size: 24px; }
         }
     </style>
 </head>
@@ -159,17 +159,73 @@
             <i class="fas fa-scissors"></i>
             <h2>CapCut</h2>
         </div>
+    </div>
     <div class="lessons-grid">
         <a href="#" class="lesson-card">
             <h3><i class="fas fa-mobile-alt"></i> واجهة البرنامج والبداية Interface & Setup</h3>
-            <p>شرح واجهة كاب كات موبايل و PC وازاي تبدأ أول مشروع ليك في ثواني</p>
+            <p>شرح واجهة كاب كت موبايل و PC وازاي تبدأ أول مشروع ليك في ثواني</p>
             <span class="badge">قريباً</span>
         </a>
         <a href="#" class="lesson-card">
             <h3><i class="fas fa-cut"></i> أدوات التحرير الأساسية Basic Editing</h3>
             <p>القص واللزق والـ Split والـ Speed وكل أدوات التحرير الأساسية للمبتدئين</p>
+            <span class="badge badge-hot">مهم</span>
+        </a>
+        <a href="#" class="lesson-card">
+            <h3><i class="fas fa-closed-captioning"></i> النصوص والترجمة التلقائية Text & Auto Captions</h3>
+            <p>ميزة كاب كات الأقوى. اضافة النصوص والـ Auto Captions والـ Text Templates بضغطة واحدة</p>
+            <span class="badge badge-hot">الأقوى</span>
+        </a>
+        <a href="#" class="lesson-card">
+            <h3><i class="fas fa-sparkles"></i> المؤثرات والانتقالات Effects & Transitions</h3>
+            <p>مكتبة الفلاتر والـ Effects الجاهزة وازاي تستخدم الـ Trending Transitions</p>
             <span class="badge">قريباً</span>
         </a>
         <a href="#" class="lesson-card">
-            <h3><i class="fas fa-closed-captioning"></i> النصوص والترجمة التلقائية</h3>
-            <p>أق
+            <h3><i class="fas fa-music"></i> التعامل مع الصوت Audio</h3>
+            <p>مكتبة الموسيقى المجانية والـ Sound Effects وازاي تظبط الصوت مع الفيديو</p>
+            <span class="badge">قريباً</span>
+        </a>
+        <a href="#" class="lesson-card">
+            <h3><i class="fas fa-robot"></i> إزالة الخلفية والذكاء الاصطناعي AI Tools</h3>
+            <p>ازالة الخلفية بالـ AI والـ Auto Cutout والـ AI Effects الجديدة</p>
+            <span class="badge badge-hot">جديد</span>
+        </a>
+        <a href="#" class="lesson-card">
+            <h3><i class="fas fa-share-alt"></i> التصدير النهائي Export</h3>
+            <p>أفضل إعدادات التصدير للتيك توك والريلز واليوتيوب شورتس بجودة 4K</p>
+            <span class="badge">قريباً</span>
+        </a>
+    </div>
+    <script>
+        const canvas = document.getElementById('matrix-bg');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const code = 'GABER TALAAT CAPCUT TIKTOK REELS AI TOOLS AUTO CAPTIONS <>{}[]();=+-*/ 01 ';
+        const chars = code.split('');
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+        function draw() {
+            ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ff88';
+            ctx.font = fontSize + 'px monospace';
+            for(let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        setInterval(draw, 35);
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
