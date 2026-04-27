@@ -147,29 +147,8 @@
             object-fit: cover;
             box-shadow: 0 0 20px rgba(0,255,136,0.4);
         }
-.about-section {
-            padding: 60px 5%;
-            background: rgba(17,17,17,0.85);
-            text-align: center;
-            position: relative;
-            z-index: 1;
-            backdrop-filter: blur(3px);
-        }
-.about-section h2 {
-            font-size: 28px;
-            font-weight: 900;
-            color: #00ff88;
-            margin-bottom: 20px;
-        }
-.about-section p {
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
-            color: #ccc;
-            font-size: 16px;
-        }
         /* الزرار الجديد بس */
-      .story-btn {
+     .story-btn {
             display: inline-block;
             margin-top: 25px;
             padding: 15px 40px;
@@ -182,7 +161,7 @@
             box-shadow: 0 0 20px rgba(0,255,136,0.4);
             transition: 0.3s;
         }
-      .story-btn:hover {
+     .story-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 0 30px rgba(0,255,136,0.7);
         }
@@ -378,17 +357,72 @@
         <img src="gaber.jpg" alt="Gaber Talaat" class="profile-pic">
     </div>
 
-    <div class="about-section">
-        <h2>من أنا؟ 👨‍💻</h2>
-        <p>
-            أنا جابر، مبرمج ومصمم جرافيك. بحب أشارك كل الأدوات والملفات اللي بتسهل شغلي معاكم مجاناً.
-            هنا هتلاقي كل حاجة محتاجها عشان تطلع شغل احترافي من غير ما تدفع جنيه.
-        </p>
-        <!-- الزرار الجديد اهو -->
-        <a href="about-sidi-gaber.html" class="story-btn">
-            <i class="fas fa-book"></i> اقرا قصة Sidi Gaber كاملة
-        </a>
-    </div>
+    <!-- بداية الـ 3 كروت الجديدة -->
+    <section style="padding: 40px 5%; background: #0a0a0a;">
+        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
+
+            <!-- كارت 1: من أنا؟ -->
+            <div style="background: #111; border: 2px solid #00ff88; border-radius: 15px; padding: 30px; text-align: center; transition: 0.3s; box-shadow: 0 0 20px rgba(0,255,136,0.1);">
+                <i class="fas fa-user-circle" style="font-size: 45px; color: #00ff88; margin-bottom: 15px; display: block;"></i>
+                <h3 style="font-size: 24px; color: #00ff88; margin-bottom: 15px; font-weight: 900;">من أنا؟</h3>
+                <p style="color: #ccc; font-size: 15px; line-height: 1.7; margin-bottom: 20px;">
+                    أنا جابر طلعت، 23 سنة، خريج نظم ومعلومات 2025. مؤسس مكتبة Sidi Gaber للتحميلات المجانية.
+                </p>
+                <a href="about-sidi-gaber.html" style="display: inline-block; background: linear-gradient(90deg, #00ff88, #00cc6a); color: #000; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,255,136,0.3);">
+                    <i class="fas fa-book-open"></i> اقرا قصتي كاملة
+                </a>
+            </div>
+
+            <!-- كارت 2: تواصل معايا -->
+            <div style="background: #111; border: 2px solid #00ff88; border-radius: 15px; padding: 30px; text-align: center; transition: 0.3s; box-shadow: 0 0 20px rgba(0,255,136,0.1);">
+                <i class="fas fa-link" style="font-size: 45px; color: #00ff88; margin-bottom: 15px; display: block;"></i>
+                <h3 style="font-size: 24px; color: #00ff88; margin-bottom: 20px; font-weight: 900;">تواصل معايا</h3>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://www.facebook.com/share/18abG5c7zP/" target="_blank" style="width: 50px; height: 50px; background: #1a1a1a; border: 2px solid #00ff88; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #00ff88; font-size: 20px; transition: 0.3s; text-decoration: none;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/g.t.m_27" target="_blank" style="width: 50px; height: 50px; background: #1a1a1a; border: 2px solid #00ff88; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #00ff88; font-size: 20px; transition: 0.3s; text-decoration: none;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/add/gtmm_27" target="_blank" style="width: 50px; height: 50px; background: #1a1a1a; border: 2px solid #00ff88; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #00ff88; font-size: 20px; transition: 0.3s; text-decoration: none;">
+                        <i class="fab fa-snapchat"></i>
+                    </a>
+                    <a href="https://t.me/GTM_MEDIA2" target="_blank" style="width: 50px; height: 50px; background: #1a1a1a; border: 2px solid #00ff88; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #00ff88; font-size: 20px; transition: 0.3s; text-decoration: none;">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- كارت 3: أفضل المصورين في مصر -->
+            <div style="background: #111; border: 2px solid #00ff88; border-radius: 15px; padding: 30px; text-align: center; transition: 0.3s; box-shadow: 0 0 20px rgba(0,255,136,0.1);">
+                <i class="fas fa-camera-retro" style="font-size: 45px; color: #00ff88; margin-bottom: 15px; display: block;"></i>
+                <h3 style="font-size: 24px; color: #00ff88; margin-bottom: 15px; font-weight: 900;">أفضل المصورين</h3>
+                <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; color: #ccc; font-size: 15px; text-align: right;">
+                    <li style="padding: 8px 0; border-bottom: 1px solid #222;">
+                        <i class="fas fa-star" style="color: #00ff88; margin-left: 8px; font-size: 12px;"></i>
+                        جابر طلعت
+                    </li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid #222;">
+                        <i class="fas fa-star" style="color: #00ff88; margin-left: 8px; font-size: 12px;"></i>
+                        تامر هاني
+                    </li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid #222;">
+                        <i class="fas fa-star" style="color: #00ff88; margin-left: 8px; font-size: 12px;"></i>
+                        العالمي
+                    </li>
+                    <li style="padding: 8px 0;">
+                        <i class="fas fa-star" style="color: #00ff88; margin-left: 8px; font-size: 12px;"></i>
+                        سلمى عبد الله
+                    </li>
+                </ul>
+                <a href="#photographers" style="display: inline-block; background: transparent; border: 2px solid #00ff88; color: #00ff88; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 14px; transition: 0.3s;">
+                    <i class="fas fa-eye"></i> شوف القائمة كاملة
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- نهاية الـ 3 كروت -->
 
     <h2 class="section-title">خريطة التحميلات 👇</h2>
 
@@ -497,8 +531,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
 
     <div class="services-section">
         <h2 class="section-title">خدماتي 💼</h2>
